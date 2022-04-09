@@ -13,9 +13,7 @@ Startup Kubernetes by minikube
 
 `helm repo add dragonfly https://dragonflyoss.github.io/helm-charts/`{{execute T1}}
 
-`vim /root/values.yaml`{{execute T2}}
-
-`:q`{{execute T2}}
+`/root/values.yaml`{{open}}
 
 `helm install --create-namespace --namespace dragonfly-system dragonfly dragonfly/dragonfly -f /root/values.yaml`{{execute T1}}
 
@@ -23,7 +21,7 @@ Startup Kubernetes by minikube
 
 `kubectl -n dragonfly-system patch svc dragonfly-manager --type merge -p '{"spec":{"ports": [{"name": "http-rest","nodePort": 31234,"port": 8080,"protocol": "TCP","targetPort": 8080}]}}'`{{execute T1}}
 
-`https://[[HOST_SUBDOMAIN]]-31234-[[KATACODA_HOST]].environments.katacoda.com`
+https://[[HOST_SUBDOMAIN]]-31234-[[KATACODA_HOST]].environments.katacoda.com
 
 `docker pull registry.cn-hangzhou.aliyuncs.com/alidragonfly/supernode:0.2.0`{{execute T1}}
 
