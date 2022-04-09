@@ -65,6 +65,7 @@ containerRuntime:
     registryDomains:
       - "ghcr.io"
       - "quay.io"
+      - "registry.cn-hangzhou.aliyuncs.com"
     # -- Registry ports
     registryPorts:
       - 443
