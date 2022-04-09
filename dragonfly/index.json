@@ -18,11 +18,31 @@
     },
     "assets": {
       "host01": [
-        {"file": "values.yaml", "target": "/root/"}
+        {
+          "file": "values.yaml",
+          "target": "/root/"
+        }
       ]
     }
   },
   "environment": {
+    "hideintro": true,
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Manager Console UI",
+        "href": "https://[[HOST_SUBDOMAIN]]-31234-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "terminals": [
+      {
+        "name": "Terminal 2",
+        "target": "host01"
+      }
+    ],
+    "hideHiddenFiles": true,
+    "uisettings": "yaml",
+    "uieditorpath": "/root/",
     "uilayout": "terminal"
   },
   "backend": {
