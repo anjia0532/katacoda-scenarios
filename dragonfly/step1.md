@@ -21,7 +21,9 @@ Startup Kubernetes by minikube
 
 `kubectl -n dragonfly-system wait --for=condition=ready --all --timeout=10m pod`{{execute T1}}
 
-`https://[[HOST_SUBDOMAIN]]-3xxxx-[[KATACODA_HOST]].environments.katacoda.com`
+`kubectl -n dragonfly-system patch svc dragonfly-manager --type merge -p '{"spec":{"ports": [{"name": "http-rest","nodePort": 31234,"port": 8080,"protocol": "TCP","targetPort": 8080}]}}'`{{execute T1}}
+
+`https://[[HOST_SUBDOMAIN]]-31234-[[KATACODA_HOST]].environments.katacoda.com`
 
 `docker pull registry.cn-hangzhou.aliyuncs.com/alidragonfly/supernode:0.2.0`{{execute T1}}
 

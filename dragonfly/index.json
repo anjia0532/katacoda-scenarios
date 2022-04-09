@@ -23,7 +23,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "minikube"
