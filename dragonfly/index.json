@@ -15,11 +15,22 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "values.yaml", "target": "/root/values.yaml"}
+      ]
     }
   },
+  "files": [
+    "values.yaml"
+  ],
   "environment": {
-    "hideintro": true,
-    "uilayout": "terminal-terminal"
+    "hidefinish": true,
+    "hideHiddenFiles": true,
+    "uilayout": "editor-terminal",
+    "uisettings": "yaml",
+    "uieditorpath": "/root/"
   },
   "backend": {
     "imageid": "minikube"
