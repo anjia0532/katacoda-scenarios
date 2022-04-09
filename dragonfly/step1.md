@@ -13,7 +13,9 @@ Startup Kubernetes by minikube
 
 `helm repo add dragonfly https://dragonflyoss.github.io/helm-charts/`{{execute T1}}
 
-`/root/values.yaml`{{open}}
+`vim /root/values.yaml`{{execute T2}}
+
+`:q`{{execute T2}}
 
 `helm install --create-namespace --namespace dragonfly-system dragonfly dragonfly/dragonfly -f /root/values.yaml`{{execute T1}}
 
