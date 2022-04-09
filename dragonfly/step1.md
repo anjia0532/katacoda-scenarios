@@ -1,3 +1,11 @@
-This environment has a `launch.sh`{{execute}}
 
-You can get with `kubectl get nodes`{{execute}}
+Startup Kubernetes by minikube
+
+```bash
+minikube start \
+    --network-plugin=cni \
+    --enable-default-cni \
+    --container-runtime=containerd \
+    --bootstrapper=kubeadm
+```
+{{execute}}
