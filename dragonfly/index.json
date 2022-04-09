@@ -23,9 +23,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uisettings": "yaml",
-    "uieditorpath": "/root/"
+    "uilayout": "terminal-terminal",
   },
   "backend": {
     "imageid": "minikube"

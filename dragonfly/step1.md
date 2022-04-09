@@ -21,4 +21,8 @@ Startup Kubernetes by minikube
 
 `kubectl -n dragonfly-system wait --for=condition=ready --all --timeout=10m pod`{{execute T1}}
 
-https://[[HOST_SUBDOMAIN]]-32531-[[KATACODA_HOST]].environments.katacoda.com
+`https://[[HOST_SUBDOMAIN]]-3xxxx-[[KATACODA_HOST]].environments.katacoda.com`
+
+`docker pull registry.cn-hangzhou.aliyuncs.com/alidragonfly/supernode:0.2.0`{{execute T1}}
+
+`kubectl -n dragonfly-system exec -it $(kubectl -n dragonfly-system get pods --no-headers -o custom-columns=":metadata.name" -l component=dfdaemon | head -n1 ) -- grep "peer task done" /var/log/dragonfly/daemon/core.log | jq .`{{execute T1}}
