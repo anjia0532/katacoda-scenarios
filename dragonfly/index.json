@@ -22,13 +22,8 @@
       ]
     }
   },
-  "files": [
-    "values.yaml"
-  ],
   "environment": {
-    "hidefinish": true,
-    "hideHiddenFiles": true,
-    "uilayout": "editor-terminal",
+    "uilayout": "terminal",
     "uisettings": "yaml",
     "uieditorpath": "/root/"
   },
