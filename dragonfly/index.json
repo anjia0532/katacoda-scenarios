@@ -18,7 +18,7 @@
     },
     "assets": {
       "host01": [
-        {"file": "values.yaml", "target": "/root/values.yaml"}
+        {"file": "values.yaml", "target": "/root/"}
       ]
     }
   },

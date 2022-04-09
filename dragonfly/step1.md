@@ -13,19 +13,8 @@ Startup Kubernetes by minikube
 
 `helm repo add dragonfly https://dragonflyoss.github.io/helm-charts/`{{execute}}
 
-```sh
-cat << EOF > /tmp/values.yaml
-apiVersion: v1
-kind: Secret
-metadata:
-name: "storageos-api"
-namespace: "storageos-operator"
-labels:
-app: "storageos"
-type: "kubernetes.io/storageos"
-EOF
-```{{execute}}
-
-`helm install --create-namespace --namespace dragonfly-system dragonfly dragonfly/dragonfly`{{execute}}
+`helm install --create-namespace --namespace dragonfly-system dragonfly dragonfly/dragonfly -f /root/values.yaml`{{execute}}
 
 `kubectl -n dragonfly-system wait --for=condition=ready --all --timeout=10m pod`{{execute}}
+
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
