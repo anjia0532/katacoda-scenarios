@@ -1,20 +1,20 @@
 
-拉取演示 demo 镜像，并且确保拉取完毕，在 Dragonfly CDN 没有缓存的情况下，拉取速度比较慢
+Pull demo images and wait it done
 
 `time docker pull registry.cn-hangzhou.aliyuncs.com/alidragonfly/supernode:0.2.0`{{execute T1}}
 
-查看 Dfdaemon 日志
+Watching dfdaemon log
 
 `docker exec dfdaemon tail -f /var/log/dragonfly/daemon/core.log`{{execute T2}}
 
-删除演示 demo 镜像
+Remove demo image
 
 `docker rmi registry.cn-hangzhou.aliyuncs.com/alidragonfly/supernode:0.2.0`{{execute T1}}
 
-重新拉取演示 demo 镜像，此时Dragonfly CDN 已有缓存，拉取速度很快
+Rerun the pull command line
 
 `time docker pull registry.cn-hangzhou.aliyuncs.com/alidragonfly/supernode:0.2.0`{{execute T1}}
 
-筛选查看 `/var/log/dragonfly/daemon/core.log` 中的 `peer task done`
+Pickup `peer task done` log from `/var/log/dragonfly/daemon/core.log`
 
 `docker exec dfdaemon grep "peer task done" /var/log/dragonfly/daemon/core.log`{{execute T2}}

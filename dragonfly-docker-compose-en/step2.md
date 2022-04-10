@@ -1,7 +1,7 @@
 
 ### 配置 Docker Registry
 
-修改 Docker Daemon 配置文件
+Modify Docker Daemon Config file
 
 ```sh
 cat << EOF > /etc/docker/daemon.json
@@ -14,6 +14,6 @@ cat << EOF > /etc/docker/daemon.json
 EOF
 ```{{execute T1}}
 
-重启 Docker 服务
+Restart Docker Service
 
 `service docker restart`{{execute T1}}

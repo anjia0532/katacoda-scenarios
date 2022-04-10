@@ -16,6 +16,12 @@
 
 ### 使用 Docker Compose 启动 Dragonfly
 
-`cd deploy/docker-compose && ./run.sh`{{execute T1}}
+`cd Dragonfly2/deploy/docker-compose/ && ./run.sh`{{execute T1}}
 
 `docker-compose ps`{{execute T1}}
+
+### 访问 Dragonfly Manager Console Web UI
+
+点击 `Manager Console UI` dashboard
+
+或者 直接点击这个链接 [Manager Console UI](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com)

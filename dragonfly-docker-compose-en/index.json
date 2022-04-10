@@ -1,20 +1,20 @@
 {
-  "title": "Dragonfly 使用 Docker Compose 安装教程",
-  "description": "Dragonfly 使用 Docker Compose 安装教程",
+  "title": "Dragonfly Docker Compose guide",
+  "description": "Dragonfly Docker Compose guide",
   "difficulty": "Beginner",
   "time": "10 minutes",
   "details": {
     "steps": [
       {
-        "title": "克隆并运行 Dragonfly",
+        "title": "Clone and Startup Dragonfly",
         "text": "step1.md"
       },
       {
-        "title": "修改 Docker Registry 配置",
+        "title": "Modify Docker Registry",
         "text": "step2.md"
       },
       {
-        "title": "通过 Dfdaemon 拉取镜像",
+        "title": "Pull images by Dfdaemon",
         "text": "step3.md"
       }
     ],
