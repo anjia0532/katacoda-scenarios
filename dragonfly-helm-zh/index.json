@@ -1,13 +1,21 @@
 {
-  "title": "Dragonfly",
-  "description": "Dragonfly Katacoda",
+  "title": "Dragonfly 使用 helm 安装教程",
+  "description": "Dragonfly 使用 helm 安装教程",
   "difficulty": "Beginner",
   "time": "20 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "初始化 Kubernetes 集群",
         "text": "step1.md"
+      },
+      {
+        "title": "使用 helm 安装 Dragonfly",
+        "text": "step2.md"
+      },
+      {
+        "title": "通过 Dfdaemon 拉取镜像",
+        "text": "step3.md"
       }
     ],
     "intro": {
@@ -26,7 +34,6 @@
     }
   },
   "environment": {
-    "hideintro": true,
     "showdashboard": true,
     "dashboards": [
       {

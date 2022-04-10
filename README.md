@@ -1,10 +1,5 @@
-# Interactive Katacoda Scenarios
 
-[![](http://shields.katacoda.com/katacoda/anjia/count.svg)](https://www.katacoda.com/anjia "Get your profile on Katacoda.com")
+# Guide of Dragonfly by katacoda
 
-Visit https://www.katacoda.com/anjia to view the profile and interactive scenarios
-
-### Writing Scenarios
-Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
-
-For examples, visit https://github.com/katacoda/scenario-example
+- [English of guide of install Dragonfly by helm](./dragonfly-helm-en)
+- [使用 helm 安装 Dragonfly 中文教程](./dragonfly-helm-zh)
