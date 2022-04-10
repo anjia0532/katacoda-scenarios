@@ -1,20 +1,20 @@
 {
-  "title": "Dragonfly helm charts guide",
-  "description": "Dragonfly helm charts guide",
+  "title": "Dragonfly 使用 Docker Compose 安装教程",
+  "description": "Dragonfly 使用 Docker Compose 安装教程",
   "difficulty": "Beginner",
-  "time": "20 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
-        "title": "Initializing Kubernetes",
+        "title": "克隆并运行 Dragonfly",
         "text": "step1.md"
       },
       {
-        "title": "Install Dragonfly by helm",
+        "title": "修改 Docker Registry 配置",
         "text": "step2.md"
       },
       {
-        "title": "Pull images by dfdaemon",
+        "title": "通过 Dfdaemon 拉取镜像",
         "text": "step3.md"
       }
     ],
@@ -23,14 +23,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "values.yaml",
-          "target": "/root/"
-        }
-      ]
     }
   },
   "environment": {
@@ -48,12 +40,9 @@
         "target": "host01"
       }
     ],
-    "hideHiddenFiles": true,
-    "uisettings": "yaml",
-    "uieditorpath": "/root/",
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "minikube"
+    "imageid": "ubuntu:2004"
   }
 }
