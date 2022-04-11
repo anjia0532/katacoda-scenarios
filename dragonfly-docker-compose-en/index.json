@@ -10,12 +10,8 @@
         "text": "step1.md"
       },
       {
-        "title": "Modify Docker Registry",
-        "text": "step2.md"
-      },
-      {
         "title": "Pull images by Dfdaemon",
-        "text": "step3.md"
+        "text": "step2.md"
       }
     ],
     "intro": {

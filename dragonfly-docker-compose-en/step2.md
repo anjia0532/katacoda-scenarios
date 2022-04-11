@@ -1,19 +1,20 @@
 
-### 配置 Docker Registry
+Pull demo images and wait it done
 
-Modify Docker Daemon Config file
+`time docker pull nginx`{{execute T1}}
 
-```sh
-cat << EOF > /etc/docker/daemon.json
-{
-    "bip":"172.18.0.1/24",
-    "debug": true,
-    "storage-driver": "overlay",
-    "registry-mirrors": ["http://127.0.0.1:65001","http://docker-registry-mirror.katacoda.com"]
-}
-EOF
-```{{execute T1}}
+Watching dfdaemon log
 
-Restart Docker Service
+`docker exec dfdaemon tail -f /var/log/dragonfly/daemon/core.log`{{execute T2}}
 
-`service docker restart`{{execute T1}}
+Remove demo image
+
+`docker rmi nginx`{{execute T1}}
+
+Rerun the pull command line
+
+`time docker pull nginx`{{execute T1}}
+
+Pickup `peer task done` log from `/var/log/dragonfly/daemon/core.log`
+
+`docker exec dfdaemon grep "peer task done" /var/log/dragonfly/daemon/core.log`{{execute T2}}

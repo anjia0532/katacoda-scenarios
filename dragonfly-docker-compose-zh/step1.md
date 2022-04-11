@@ -14,9 +14,36 @@
 
 `export IP=$(hostname -I | cut -d' ' -f1)`{{execute T1}}
 
+### 使用 Docker Compose 拉取镜像
+
+`cd Dragonfly2/deploy/docker-compose/ && docker-compose pull`{{execute T1}}
+
+### 配置 Docker Registry
+
+修改 Docker Daemon 配置文件
+
+```sh
+cat << EOF > /etc/docker/daemon.json
+{
+    "bip":"172.18.0.1/24",
+    "debug": true,
+    "storage-driver": "overlay",
+    "registry-mirrors": ["http://127.0.0.1:65001","http://docker-registry-mirror.katacoda.com"]
+}
+EOF
+```{{execute T1}}
+
+重启 Docker 服务
+
+`service docker restart`{{execute T1}}
+
 ### 使用 Docker Compose 启动 Dragonfly
 
-`cd Dragonfly2/deploy/docker-compose/ && ./run.sh`{{execute T1}}
+启动 Dragonfly
+
+`./run.sh`{{execute T1}}
+
+查看各组件状态
 
 `docker-compose ps`{{execute T1}}
 

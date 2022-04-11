@@ -10,10 +10,6 @@
         "text": "step1.md"
       },
       {
-        "title": "修改 Docker Registry 配置",
-        "text": "step2.md"
-      },
-      {
         "title": "通过 Dfdaemon 拉取镜像",
         "text": "step3.md"
       }
