@@ -1,26 +1,22 @@
-### 查看 Docker 版本和 Docker Compose 版本
+### View Docker version and  Docker Compose version
 
 `docker version`{{execute T1}}
 
 `docker-compose version`{{execute T1}}
 
-### 克隆 Dragonfly 库
+Wait for clone success.
 
-`git clone https://github.com/dragonflyoss/Dragonfly2.git`{{execute T1}}
-
-等待 clone 成功。
-
-### 获取本机 ip
+### Get Local ip
 
 `export IP=$(hostname -I | cut -d' ' -f1)`{{execute T1}}
 
-### 使用 Docker Compose 拉取镜像
+### Pull MySQL and Redis images by Docker Compose
 
-`cd Dragonfly2/deploy/docker-compose/ && docker-compose pull`{{execute T1}}
+`docker-compose pull`{{execute T1}}
 
-### 配置 Docker Registry
+### Modify Docker Registry
 
-修改 Docker Daemon 配置文件
+Modify Docker Daemon Config file
 
 ```sh
 cat << EOF > /etc/docker/daemon.json
@@ -33,22 +29,10 @@ cat << EOF > /etc/docker/daemon.json
 EOF
 ```{{execute T1}}
 
-重启 Docker 服务
+Restart Docker Service
 
 `service docker restart`{{execute T1}}
 
-### 使用 Docker Compose 启动 Dragonfly
+### Startup MySQL and Redis by Docker Compose
 
-启动 Dragonfly
-
-`./run.sh`{{execute T1}}
-
-查看各组件状态
-
-`docker-compose ps`{{execute T1}}
-
-### 访问 Dragonfly Manager Console Web UI
-
-点击 `Manager Console UI` dashboard
-
-或者 直接点击这个链接 [Manager Console UI](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com)
+`docker-compose up -d `{{execute T1}}

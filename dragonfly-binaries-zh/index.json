@@ -1,16 +1,20 @@
 {
-  "title": "[WIP]Dragonfly 使用 Docker Compose 安装教程",
-  "description": "[WIP]Dragonfly 使用 Docker Compose 安装教程",
+  "title": "[WIP]Dragonfly Binaries guide",
+  "description": "[WIP]Dragonfly Binaries guide",
   "difficulty": "Beginner",
   "time": "10 minutes",
   "details": {
     "steps": [
       {
-        "title": "克隆并运行 Dragonfly",
+        "title": "Initializing",
         "text": "step1.md"
       },
       {
-        "title": "通过 Dfdaemon 拉取镜像",
+        "title": "Download the precompiled binaries and Startup",
+        "text": "step2.md"
+      },
+      {
+        "title": "Pull images by dfdaemon",
         "text": "step3.md"
       }
     ],
@@ -19,6 +23,34 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "cdn.template.yaml",
+          "target": "/root/template/"
+        },
+        {
+          "file": "dfget.template.yaml",
+          "target": "/root/template/"
+        },
+        {
+          "file": "manager.template.yaml",
+          "target": "/root/template/"
+        },
+        {
+          "file": "scheduler.template.yaml",
+          "target": "/root/template/"
+        },
+        {
+          "file": "docker-compose.yaml",
+          "target": "/root/"
+        },
+        {
+          "file": "nginx-file-server.conf",
+          "target": "/root/"
+        }
+      ]
     }
   },
   "environment": {
