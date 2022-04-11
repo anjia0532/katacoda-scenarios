@@ -52,3 +52,7 @@ EOF
 点击 `Manager Console UI` dashboard
 
 或者 直接点击这个链接 [Manager Console UI](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com)
+
+### 文档
+
+[使用 Docker Compose 安装 Dragonfly](https://d7y.io/zh/docs/getting-started/quick-start/docker-compose/)

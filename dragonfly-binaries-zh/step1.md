@@ -1,26 +1,26 @@
-### View Docker version and  Docker Compose version
+### 查看 Docker 版本和 Docker Compose 版本
 
 `docker version`{{execute T1}}
 
 `docker-compose version`{{execute T1}}
 
-### Clone Dragonfly repo
+### 克隆 Dragonfly 库
 
 `git clone https://github.com/dragonflyoss/Dragonfly2.git`{{execute T1}}
 
-Wait for clone success.
+等待 clone 成功。
 
-### Get Local ip
+### 获取本机 ip
 
 `export IP=$(hostname -I | cut -d' ' -f1)`{{execute T1}}
 
-### Startup Dragonfly by Docker Compose
+### 使用 Docker Compose 拉取镜像
 
 `cd Dragonfly2/deploy/docker-compose/ && docker-compose pull`{{execute T1}}
 
-### Modify Docker Registry
+### 配置 Docker Registry
 
-Modify Docker Daemon Config file
+修改 Docker Daemon 配置文件
 
 ```sh
 cat << EOF > /etc/docker/daemon.json
@@ -33,25 +33,22 @@ cat << EOF > /etc/docker/daemon.json
 EOF
 ```{{execute T1}}
 
-Restart Docker Service
+重启 Docker 服务
 
 `service docker restart`{{execute T1}}
 
-### Startup Dragonfly
+### 使用 Docker Compose 启动 Dragonfly
 
-Startup
+启动 Dragonfly
 
 `./run.sh`{{execute T1}}
 
-View status
+查看各组件状态
 
 `docker-compose ps`{{execute T1}}
 
-### Access Dragonfly Manager Console Web UI
+### 访问 Dragonfly Manager Console Web UI
 
-Click `Manager Console UI` dashboard or this link [Manager Console UI](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com)
+点击 `Manager Console UI` dashboard
 
-
-### Document
-
-[Install Dragonfly by Docker Compose](https://d7y.io/docs/getting-started/quick-start/docker-compose/)
+或者 直接点击这个链接 [Manager Console UI](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com)

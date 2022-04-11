@@ -25,3 +25,7 @@ Download and install helm into `/usr/local/bin/`
 `tar -zxvf helm-v3.8.1-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm`{{execute T1}}
 
 `helm --help`{{execute T1}}
+
+### Document
+
+[Install Dragonfly by helm charts doc](https://d7y.io/docs/setup/install/helm-charts)
