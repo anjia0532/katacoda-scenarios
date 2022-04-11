@@ -27,19 +27,19 @@
     "assets": {
       "host01": [
         {
-          "file": "cdn.template.yaml",
+          "file": "template/cdn.template.yaml",
           "target": "/root/template/"
         },
         {
-          "file": "dfget.template.yaml",
+          "file": "template/dfget.template.yaml",
           "target": "/root/template/"
         },
         {
-          "file": "manager.template.yaml",
+          "file": "template/manager.template.yaml",
           "target": "/root/template/"
         },
         {
-          "file": "scheduler.template.yaml",
+          "file": "template/scheduler.template.yaml",
           "target": "/root/template/"
         },
         {
