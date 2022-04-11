@@ -4,6 +4,10 @@
 
 `docker-compose version`{{execute T1}}
 
+### Document
+
+[Install Dragonfly by Docker Compose](https://d7y.io/docs/getting-started/quick-start/docker-compose/)
+
 ### Clone Dragonfly repo
 
 `git clone https://github.com/dragonflyoss/Dragonfly2.git`{{execute T1}}
@@ -51,7 +55,3 @@ View status
 
 Click `Manager Console UI` dashboard or this link [Manager Console UI](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com)
 
-
-### Document
-
-[Install Dragonfly by Docker Compose](https://d7y.io/docs/getting-started/quick-start/docker-compose/)

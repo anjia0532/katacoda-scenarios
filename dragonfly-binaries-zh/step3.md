@@ -1,20 +1,20 @@
 
-Pull demo images and wait it done
+拉取演示 demo 镜像，并且确保拉取完毕，在 Dragonfly CDN 没有缓存的情况下，拉取速度比较慢
 
 `time docker pull nginx`{{execute T1}}
 
-Watching dfdaemon log
+查看 Dfdaemon 日志
 
 `tail -f /var/log/dragonfly/daemon/core.log`{{execute T2}}
 
-Remove demo image
+删除演示 demo 镜像
 
 `docker rmi nginx`{{execute T1}}
 
-Rerun the pull command line
+重新拉取演示 demo 镜像，此时Dragonfly CDN 已有缓存，拉取速度很快
 
 `time docker pull nginx`{{execute T1}}
 
-Pickup `peer task done` log from `/var/log/dragonfly/daemon/core.log`
+筛选查看 `/var/log/dragonfly/daemon/core.log` 中的 `peer task done`
 
 `grep "peer task done" /var/log/dragonfly/daemon/core.log`{{execute T2}}

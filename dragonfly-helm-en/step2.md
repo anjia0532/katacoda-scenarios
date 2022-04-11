@@ -1,11 +1,15 @@
 
+### Document
+
+[Install Dragonfly by helm charts doc](https://d7y.io/docs/setup/install/helm-charts)
+
 ### Install Dragonfly by helm
 
 #### Added dragonfly repo
 
 `helm repo add dragonfly https://dragonflyoss.github.io/helm-charts/`{{execute T1}}
 
-#### Edit dragonfly chart's `values.yaml` 
+#### Edit dragonfly chart's `values.yaml`
 
 `vim /root/values.yaml`{{execute T2}}
 

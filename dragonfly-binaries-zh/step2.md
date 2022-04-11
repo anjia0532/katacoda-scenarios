@@ -1,24 +1,28 @@
-### Download the precompiled binaries
+### 文档
 
-Download a binary package of the cdn. You can download one of the latest builds for Dragonfly on the [github releases page](https://github.com/dragonflyoss/Dragonfly2/releases)
+[通过预编译二进制安装 Dragonfly](https://d7y.io/docs/setup/install/source)
 
-Replace `x.y.z` to real version, e.g. `export version=2.0.2`
+### 下载预编译二进制文件
+
+从 [github releases 页面](https://github.com/dragonflyoss/Dragonfly2/releases) 下载预编译二进制文件
+
+替换 `x.y.z` 为真实版本, 例如 `export version=2.0.2`
 
 `export version=x.y.z`
 
-`wget -o Dragonfly2_linux_amd64.tar.gz https://github.com/dragonflyoss/Dragonfly2/releases/download/v${version}/Dragonfly2_${version}_linux_amd64.tar.gz`{{execute T1}}
+`wget -o Dragonfly2-linux-amd64.tar.gz https://github.com/dragonflyoss/Dragonfly2/releases/download/v${version}/Dragonfly2-${version}-linux-amd64.tar.gz`{{execute T1}}
 
-Wait for download success.
+等待下载成功。
 
-### Unzip the package
+### 解压缩
 
-`tar -zxf Dragonfly2_linux_amd64.tar.gz -C /opt/dragonfly/`{{execute T1}}
+`mkdir -p /opt/dragonfly/ && tar zxvf Dragonfly2-linux-amd64.tar.gz -C /opt/dragonfly/`{{execute T1}}
 
-### Configuration environment
+### 配置环境变量
 
 `export PATH="/opt/dragonfly/:$PATH"`{{execute T1}}
 
-### Configuration config file
+### 配置配置文件
 
 ```sh
 mkdir -p /etc/dragonfly/ && \
@@ -28,11 +32,19 @@ ip=${IP:-$(hostname -i)} && \
 sed "s,__IP__,$ip," template/cdn.template.yaml > /etc/dragonfly/cdn.yaml && \
 sed "s,__IP__,$ip," template/dfget.template.yaml > /etc/dragonfly/dfget.yaml && \
 sed "s,__IP__,$ip," template/scheduler.template.yaml > /etc/dragonfly/scheduler.yaml && \
-sed "s,__IP__,$ip," template/manager.template.yaml > /etc/dragonfly/manager.yaml && \
+sed "s,__IP__,$ip," template/manager.template.yaml > /etc/dragonfly/manager.yaml
 ```{{execute T1}}
 
+### 启动服务
 
-`chmod +x /opt/dragonfly/manager && /opt/dragonfly/manager &`{{execute T1}}
-`chmod +x /opt/dragonfly/cdn && /opt/dragonfly/cdn &`{{execute T1}}
-`chmod +x /opt/dragonfly/scheduler  && /opt/dragonfly/scheduler &`{{execute T1}}
-`chmod +x /opt/dragonfly/dfget && /opt/dragonfly/dfget daemon &`{{execute T1}}
+Startup manager
+`chmod +x /opt/dragonfly/manager && nohup /opt/dragonfly/manager &`{{execute T1}}
+
+Startup cdn
+`chmod +x /opt/dragonfly/cdn && nohup /opt/dragonfly/cdn &`{{execute T1}}
+
+Startup scheduler
+`chmod +x /opt/dragonfly/scheduler  && nohup /opt/dragonfly/scheduler &`{{execute T1}}
+
+Startup dfdaemon
+`chmod +x /opt/dragonfly/dfget && nohup /opt/dragonfly/dfget daemon &`{{execute T1}}

@@ -1,1 +1,1 @@
-`Dragonfly` 是一个基于 P2P 的镜像和文件分发系统
+`Dragonfly` is an Open-source P2P-based Image and File Distribution System.

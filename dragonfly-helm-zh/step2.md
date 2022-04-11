@@ -1,11 +1,15 @@
 
+### 文档
+
+[使用 helm charts 安装 Dragonfly 文档](https://d7y.io/zh/docs/setup/install/helm-charts/)
+
 ### 使用 Helm 安装 Dragonfly
 
 #### 添加 dragonfly helm charts 库
 
 `helm repo add dragonfly https://dragonflyoss.github.io/helm-charts/`{{execute T1}}
 
-#### 编辑 `values.yaml`  
+#### 编辑 `values.yaml`
 
 `vim /root/values.yaml`{{execute T2}}
 

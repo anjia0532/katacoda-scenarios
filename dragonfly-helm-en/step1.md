@@ -26,6 +26,3 @@ Download and install helm into `/usr/local/bin/`
 
 `helm --help`{{execute T1}}
 
-### Document
-
-[Install Dragonfly by helm charts doc](https://d7y.io/docs/setup/install/helm-charts)

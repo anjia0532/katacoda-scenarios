@@ -10,7 +10,7 @@ Wait for clone success.
 
 `export IP=$(hostname -I | cut -d' ' -f1)`{{execute T1}}
 
-### Pull MySQL and Redis images by Docker Compose
+### Pull MySQL Redis Nginx images by Docker Compose
 
 `docker-compose pull`{{execute T1}}
 
@@ -33,6 +33,6 @@ Restart Docker Service
 
 `service docker restart`{{execute T1}}
 
-### Startup MySQL and Redis by Docker Compose
+### Startup MySQL Redis Nginx by Docker Compose
 
 `docker-compose up -d `{{execute T1}}
