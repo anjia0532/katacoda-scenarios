@@ -5,7 +5,7 @@
 
 查看 Dfdaemon 日志
 
-`docker exec dfdaemon tail -f /var/log/dragonfly/daemon/core.log`{{execute T2}}
+`docker exec dfdaemon cat /var/log/dragonfly/daemon/core.log`{{execute T2}}
 
 删除演示 demo 镜像
 

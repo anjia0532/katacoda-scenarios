@@ -1,3 +1,4 @@
+
 ### Document
 
 [Install Dragonfly by binaries](https://d7y.io/docs/setup/install/source)
@@ -6,11 +7,13 @@
 
 Download a binary package of the cdn. You can download one of the latest builds for Dragonfly on the [github releases page](https://github.com/dragonflyoss/Dragonfly2/releases)
 
-Replace `x.y.z` to real version, e.g. `export version=2.0.2`
-
 `export version=x.y.z`
 
-`wget -o Dragonfly2-linux-amd64.tar.gz https://github.com/dragonflyoss/Dragonfly2/releases/download/v${version}/Dragonfly2-${version}-linux-amd64.tar.gz`{{execute T1}}
+Replace `x.y.z` to real version
+
+e.g. `export version=2.0.2` {{execute T1}}
+
+`wget -O Dragonfly2-linux-amd64.tar.gz https://github.com/dragonflyoss/Dragonfly2/releases/download/v${version}/Dragonfly2-${version}-linux-amd64.tar.gz`{{execute T1}}
 
 Wait for download success.
 
@@ -48,3 +51,7 @@ Startup scheduler
 
 Startup dfdaemon
 `chmod +x /opt/dragonfly/dfget && nohup /opt/dragonfly/dfget daemon &`{{execute T1}}
+
+List of Dragonfly
+
+`ps -ef | grep dragonfly`{{execute T1}}

@@ -5,7 +5,7 @@ Pull demo images and wait it done
 
 Watching dfdaemon log
 
-`docker exec dfdaemon tail -f /var/log/dragonfly/daemon/core.log`{{execute T2}}
+`docker exec dfdaemon cat /var/log/dragonfly/daemon/core.log`{{execute T2}}
 
 Remove demo image
 

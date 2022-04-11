@@ -1,3 +1,4 @@
+
 ### 文档
 
 [通过预编译二进制安装 Dragonfly](https://d7y.io/docs/setup/install/source)
@@ -10,7 +11,7 @@
 
 `export version=x.y.z`
 
-`wget -o Dragonfly2-linux-amd64.tar.gz https://github.com/dragonflyoss/Dragonfly2/releases/download/v${version}/Dragonfly2-${version}-linux-amd64.tar.gz`{{execute T1}}
+`wget -O Dragonfly2-linux-amd64.tar.gz https://github.com/dragonflyoss/Dragonfly2/releases/download/v${version}/Dragonfly2-${version}-linux-amd64.tar.gz`{{execute T1}}
 
 等待下载成功。
 
@@ -37,14 +38,17 @@ sed "s,__IP__,$ip," template/manager.template.yaml > /etc/dragonfly/manager.yaml
 
 ### 启动服务
 
-Startup manager
+启动 manager
 `chmod +x /opt/dragonfly/manager && nohup /opt/dragonfly/manager &`{{execute T1}}
 
-Startup cdn
+启动 cdn
 `chmod +x /opt/dragonfly/cdn && nohup /opt/dragonfly/cdn &`{{execute T1}}
 
-Startup scheduler
+启动 scheduler
 `chmod +x /opt/dragonfly/scheduler  && nohup /opt/dragonfly/scheduler &`{{execute T1}}
 
-Startup dfdaemon
+启动 dfdaemon
 `chmod +x /opt/dragonfly/dfget && nohup /opt/dragonfly/dfget daemon &`{{execute T1}}
+
+列出 Dragonfly 的服务
+`ps -ef | grep dragonfly`{{execute T1}}

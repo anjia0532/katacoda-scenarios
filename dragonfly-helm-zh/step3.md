@@ -5,7 +5,7 @@
 
 查看 Dfdaemon 日志
 
-`kubectl -n dragonfly-system exec -it $(kubectl -n dragonfly-system get pods --no-headers -o custom-columns=":metadata.name" -l component=dfdaemon | head -n1 ) -- tail -f /var/log/dragonfly/daemon/core.log`{{execute T2}}
+`kubectl -n dragonfly-system exec -it $(kubectl -n dragonfly-system get pods --no-headers -o custom-columns=":metadata.name" -l component=dfdaemon | head -n1 ) -- cat /var/log/dragonfly/daemon/core.log`{{execute T2}}
 
 删除演示 demo 镜像
 
